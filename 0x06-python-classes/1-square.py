@@ -3,9 +3,9 @@
 
 
 class Square:
+    """Private instance attribute declared
+    Arguments:
+    size: size of a square
+    """
     def __init__(self, size):
-        """Private instance attribute declared
-        Arguments:
-            size: size of a square
-        """
         self.__size = size
