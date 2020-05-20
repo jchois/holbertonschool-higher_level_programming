@@ -54,7 +54,16 @@ class Square:
         Function that prints in stdout the square
     """
     def my_print(self):
-        new_list = []
-        for i in range(self.__size):
-            new_list.append("#" * self.__size)
-        print(*new_list, sep="\n")
+        if self.size > 0:
+            if self.position[1] > 0:
+                for newline in range(self.position[1]):
+                    print("")
+            for row in range(self.size):
+                if self.position[0] > 0:
+                    for spaces in range(self.position[0]):
+                        print(" ", end="")
+                for collumn in range(self.size):
+                    print("#", end="")
+                print("")
+        else:
+            print("")
