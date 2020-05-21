@@ -23,7 +23,7 @@ class Node:
                 raise TypeError("data must be an integer")
             else:
                 self.__data = value
-        
+
         #New Node
         @property
         def next_node(self):
