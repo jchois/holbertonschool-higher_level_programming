@@ -6,10 +6,10 @@ after each of these characters
 
 
 def text_indentation(text):
-    """[summary]
+    """Text Identation
 
     Arguments:
-        text {[str]}
+        text {[str]} -- paragraph
 
     Raises:
         TypeError: [text must be a string]
