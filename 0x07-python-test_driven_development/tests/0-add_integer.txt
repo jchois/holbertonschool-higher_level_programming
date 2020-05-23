@@ -21,3 +21,61 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+
+>>> add_integer(98, None)
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+	  ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer([1, 2])
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+>>> add_integer(98, [3, 4])
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+>>> add_integer([1, 2], [3, 4])
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer(98, (3, 4))
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+>>> add_integer((1, 2), (3, 4))
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer({'num1': 1, 'num2': 2})
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer(98, {'num3': 3, 'num4': 4})
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+>>> add_integer({'num1': 1, 'num2': 2}, {'num3': 3, 'num4': 4})
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer({1, 2})
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
