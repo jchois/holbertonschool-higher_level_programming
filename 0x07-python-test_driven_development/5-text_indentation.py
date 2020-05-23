@@ -19,10 +19,10 @@ def text_indentation(text):
             char = ['.', '?', ':']
             new_text = ""
             for words in text:
-                new_text = new_text + words
+                new_text += words
                 if words in char:
                     print(new_text.strip())
-                    print("")
+                    print()
                     new_text = ""
             print(new_text.strip(), end="")
         else:
