@@ -10,8 +10,8 @@ class Rectangle:
             width {int} -- [description] (default: {0})
             height {int} -- [description] (default: {0})
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     # width
     @property
