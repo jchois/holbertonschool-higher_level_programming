@@ -44,14 +44,17 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """area func"""
         return self.width * self.height
 
     def perimeter(self):
+        """perimeter func"""
         if self.width == 0 or self.height == 0:
             return 0
         return (2 * (self.width + self.height))
 
     def __str__(self):
+        """str"""
         if self.width == 0 or self.height == 0:
             return ("")
         width = "#" * self.width
