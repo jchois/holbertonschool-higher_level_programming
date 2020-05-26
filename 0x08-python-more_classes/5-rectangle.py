@@ -3,6 +3,8 @@
 
 
 class Rectangle:
+    """Rectangle Class"""
+
     def __init__(self, width=0, height=0):
         """[summary]
 
