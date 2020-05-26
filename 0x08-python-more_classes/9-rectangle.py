@@ -92,5 +92,9 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """square"""
+        '''
+        It transforms a rectangle into square.
+        ARGUMENTS:
+        → size {int} is the new size for the Rectangle.
+        '''
         return cls(size, size)
