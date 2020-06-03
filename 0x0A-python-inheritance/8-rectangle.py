@@ -37,6 +37,12 @@ class Rectangle(BaseGeometry):
         BaseGeometry - Inherit
     """
     def __init__(self, width, height):
+        """[summary]
+
+        Arguments:
+            width int
+            height int
+        """
         self.__width = width
         self.__height = height
         Rectangle.integer_validator(self, "width", width)
