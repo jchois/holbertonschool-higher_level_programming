@@ -3,6 +3,8 @@
 
 
 class MyInt(int):
+    """MyInt class"""
+
     def __init__(self, value):
         """init"""
         self.value = value
