@@ -37,13 +37,23 @@ class Rectangle(BaseGeometry):
         BaseGeometry - Inherit
     """
     def __init__(self, width, height):
+        """init
+
+        Arguments:
+            width int
+            height int
+        """
         self.__width = width
         self.__height = height
         Rectangle.integer_validator(self, "width", width)
         Rectangle.integer_validator(self, "height", height)
 
     def __str__(self):
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        """Return the print() and str() representation of a Rectangle"""
+        string = "[" + str(self.__class__.__name__) + "] "
+        string += str(self.__width) + "/" + str(self.__height)
+        return string
 
     def area(self):
+        """return area of rectangle"""
         return self.__width * self.__height
