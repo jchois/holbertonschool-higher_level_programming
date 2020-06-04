@@ -22,6 +22,7 @@ class Student:
         return new
 
     def reload_from_json(self, json):
+        """reload"""
         for x, y in json.items():
             if hasattr(self, i):
                 setattr(self, x, y)
