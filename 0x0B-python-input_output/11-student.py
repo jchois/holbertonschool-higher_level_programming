@@ -3,11 +3,11 @@
 
 
 class Student:
-    """Student class"""
-    def __init__(self, first_name, last_name):
-        """init
-        """
-        self.firs_name = firs_name
+    """Class Student"""
+
+    def __init__(self, first_name, last_name, age):
+        """initialize"""
+        self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
