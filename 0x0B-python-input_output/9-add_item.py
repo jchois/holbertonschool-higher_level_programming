@@ -9,7 +9,7 @@ load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
 try:
     lst = load_from_json_file("add_item.json")
-except Exception:
+except:
     lst = []
 for i in range(1, len(sys.argv)):
     lst.append(sys.argv[i])
