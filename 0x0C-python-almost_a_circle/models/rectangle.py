@@ -75,3 +75,10 @@ class Rectangle(Base):
     def area(self):
         '''This is the area operation.'''
         return (self.__width * self.__height)
+
+    def display(self):
+        """Print a rectangle with #"""
+        for i in range(self.height):
+            for w in range(self.width):
+                print("#", end="")
+            print()
