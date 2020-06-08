@@ -78,7 +78,7 @@ class Rectangle(Base):
 
     def display(self):
         """Print a rectangle with #"""
-        for new in range(self.__y):
+        for new in range(self.y):
             print()
         for i in range(self.height):
             for space in range(self.x):
@@ -92,6 +92,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
+        """Assigns an argument to each attribute"""
         for a, b in enumerate(args):
             if a == 0:
                 self.id = b
