@@ -111,3 +111,7 @@ class Rectangle(Base):
             self.update_args(*args)
         elif kwargs:
             self.update_args(**kwargs)
+
+    def to_dictionary(self):
+        """returns the dictionary representation"""
+        return {'x': self.id, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
