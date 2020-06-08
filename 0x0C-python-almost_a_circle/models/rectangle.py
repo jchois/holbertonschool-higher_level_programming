@@ -91,16 +91,22 @@ class Rectangle(Base):
         """Return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update_args(self, id=None, width=None, height=None, x=None, y=None):
+        """upgrade instance attribute via *args"""
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
         """Assigns an argument to each attribute"""
-        for a, b in enumerate(args):
-            if a == 0:
-                self.id = b
-            if a == 1:
-                self.width = b
-            if a == 2:
-                self.height = b
-            if a == 3:
-                self.x = b
-            if a == 4:
-                self.y = b
+        if args:
+            self.update_args(*args)
+        elif kwargs:
+            self.update_args(**kwargs)
