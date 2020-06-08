@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Base"""
-from json import dumps
+from json import dumps, loads
 
 
 class Base:
@@ -32,3 +32,11 @@ class Base:
                 newlist += [list_objs[0].to_dictionary()]
             with open(cls.__name__ + ".json", "w") as f:
                 f.write(cls.to_json_string(newlist))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation"""
+        if json_string is None or not json_string:
+            return "[]"
+        else:
+            return loads(json_string)
