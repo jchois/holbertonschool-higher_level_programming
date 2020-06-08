@@ -12,7 +12,7 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    #width
+    # width
     @property
     def width(self):
         """getter - with"""
@@ -27,7 +27,7 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-    #height
+    # height
     @property
     def height(self):
         """getter - height"""
@@ -42,7 +42,7 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
-    #x
+    # x
     @property
     def x(self):
         """getter - x"""
@@ -57,7 +57,7 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
-    #y
+    # y
     @property
     def y(self):
         """getter - y"""
@@ -89,7 +89,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}\
+            ".format(self.id, self.x, self.y, self.width, self.height)
 
     def update_args(self, id=None, width=None, height=None, x=None, y=None):
         """upgrade instance attribute via *args"""
