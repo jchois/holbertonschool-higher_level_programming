@@ -1,56 +1,39 @@
 #!/usr/bin/python3
-"""Square class module
-"""
+"""Square that inherits from Rectangle"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Class Square
-
-    Args:
-        Rectangle ([class]): class Square that inherits from Rectangle
-    """
-
+    """Squeare class"""
     def __init__(self, size, x=0, y=0, id=None):
-        """initialize method
-
-        Args:
-            size ([int]): [size of square]
-            x (int, optional): number of spaces. Defaults to 0.
-            y (int, optional): number of \n. Defaults to 0.
-            id ([int], optional): id. Defaults to None.
-        """
+        """init constructor"""
         super().__init__(size, size, x, y, id)
+        self.size = size
 
     def __str__(self):
-        """str method
-
-        Returns:
-            str: Returns string info about this square.
-        """
+        """Return [Square] (<id>) <x>/<y> - <size>"""
         return "[{}] ({}) {}/{} - {}".format(
             type(self).__name__,
-            self.id, self.x,
+            self.id,
+            self.x,
             self.y,
-            self.width
+            self.width,
         )
 
+    # size
     @property
     def size(self):
-        """size getter
-        """
+        """getter - size"""
         return self.width
 
     @size.setter
     def size(self, value):
-        """size setter
-        """
+        """setter - size"""
         self.width = value
         self.height = value
 
-    def arg_update(self, id=None, size=None, x=None, y=None):
-        """arg_update - upgrade instance attribute via *args
-        """
+    def update_args(self, id=None, size=None, x=None, y=None):
+        """upgrade instance attribute via *args"""
         if id is not None:
             self.id = id
         if size is not None:
@@ -61,17 +44,12 @@ class Square(Rectangle):
             self.y = y
 
     def update(self, *args, **kwargs):
-        """update method
-        """
+        """Assigns an argument to each attribute"""
         if args:
-            self.arg_update(*args)
+            self.update_args(*args)
         elif kwargs:
-            self.arg_update(**kwargs)
+            self.update_args(**kwargs)
 
     def to_dictionary(self):
-        """to_dictionary method
-
-        Returns:
-            [dict]: dictionary representation of this class
-        """
-        return {"id": self.id, "x": self.x, "size": self.size, "y": self.y}
+        """returns the dictionary representation"""
+        return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
