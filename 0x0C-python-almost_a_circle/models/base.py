@@ -84,3 +84,18 @@ class Base:
         except:
             pass
         return new_lst
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """[summary]
+
+        Args:
+            list_objs ([type]): [description]
+        """
+        filename = cls.__name__ + ".csv"
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """[summary]
+        """
+        filename = cls.__name__ + ".csv"
