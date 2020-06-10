@@ -89,8 +89,14 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        return "[Rectangle] ({}) {}/{} - {}/{}\
-            ".format(self.id, self.x, self.y, self.width, self.height)
+        return "[{}] ({}) {}/{} - {}/{}".format(
+            type(self)._name_,
+            self.id,
+            self.x,
+            self.y,
+            self.width,
+            self.height
+        )
 
     def update_args(self, id=None, width=None, height=None, x=None, y=None):
         """upgrade instance attribute via *args"""
