@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""model Base"""
+"""Base"""
 from json import dumps, loads
 
 
 class Base:
-    """Class Base
-    """
+    """Base class"""
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """init"""
         if id is not None:
             self.id = id
         else:
@@ -17,12 +17,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """to_json_string method
-        Args:
-            list_dictionaries ([int]):  is a list of dictionaries
-        Returns:
-            [JSON]: Return the JSON string representation of list_dictionaries
-        """
+        """returns the JSON string representation"""
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
@@ -30,11 +25,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """save to file method
-
-        Args:
-            list_objs ([int])
-        """
+        """writes the JSON string representation"""
         new_lst = []
         if list_objs is not None:
             for x in range(len(list_objs)):
@@ -44,14 +35,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """from json to string
-
-        Args:
-            json_string ([type]): [description]
-
-        Returns:
-            [type]: [description]
-        """
+        """returns the list of the JSON string representation"""
         if json_string is None or not json_string:
             return []
         else:
@@ -69,11 +53,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """load_from method
-
-        Returns:
-            [list]: list of instance
-        """
+        """returns a list of instances"""
         new_file = cls.__name__ + ".json"
         new_lst = []
         try:
