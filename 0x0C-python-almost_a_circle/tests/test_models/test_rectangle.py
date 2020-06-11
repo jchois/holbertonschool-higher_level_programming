@@ -39,7 +39,6 @@ class TestRectangleClass(unittest.TestCase):
     def test_documentation(self):
         """Test to see if documentation is created and correct"""
         self.assertTrue(hasattr(Rectangle, "__init__"))
-        self.assertTrue(Rectangle.__init__.__doc__)
         self.assertTrue(hasattr(Rectangle, "width"))
         self.assertTrue(Rectangle.width.__doc__)
         self.assertTrue(hasattr(Rectangle, "height"))
