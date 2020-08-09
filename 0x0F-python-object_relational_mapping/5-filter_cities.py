@@ -15,9 +15,9 @@ if __name__ == "__main__":
                  JOIN cities ON states.id=cities.state_id\
                  WHERE states.name = %s ORDER BY id ASC", (argv[4], ))
     rows = cur.fetchall()
-    new_list = []
+    cities_list = []
     for row in rows:
-        new_list.append(row[0])
-    print(", ".join(new_list))
+        cities_list.append(row[0])
+    print(", ".join(cities_list))
     cur.close()
     db.close()
