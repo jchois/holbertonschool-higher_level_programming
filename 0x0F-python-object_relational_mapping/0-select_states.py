@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-comment
+script that lists all states from the database
 """
 
 import MySQLdb
