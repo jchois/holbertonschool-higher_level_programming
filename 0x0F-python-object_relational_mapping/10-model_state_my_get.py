@@ -9,7 +9,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(argv[1], argv[2], argv[3]),
                            pool_pre_ping=True)
@@ -18,16 +17,13 @@ if __name__ == "__main__":
 
     Session = sessionmaker()
     Session.configure(bind=engine)
-
     session = Session()
 
-    result = None
-    states = session.query(State).filter(State.name == sys.argv[4]).all()
-
-    for state in states:
-        result = state.id
-    if result:
-        print(result)
+    res = None
+    for state in session.query(State).filter(State.name == sys.argv[4]).all():
+        res = state.id
+    if res:
+        print(res)
     else:
         print('Not found')
 
