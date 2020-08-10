@@ -10,6 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
+
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(argv[1], argv[2],
                                   argv[3]), pool_pre_ping=True)
@@ -19,10 +20,8 @@ if __name__ == "__main__":
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-
     query = session.query(State, City).filter(State.id == City.state_id).all()
-    for res in query:
+    for result in query:
         print("{}: ({}) {}".
-              format(res.State.name, res.City.id, res.City.name))
-
+              format(result.State.name, result.City.id, result.City.name))
     session.close()
