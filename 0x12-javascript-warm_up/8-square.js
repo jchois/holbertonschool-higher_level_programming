@@ -2,6 +2,10 @@
 
 const size = process.argv[2];
 
-for (let i = 0; i < size; i++) {
-  console.log('X'.repeat(size));
+if (size) {
+  for (let i = 0; i < size; i++) {
+    console.log('X'.repeat(size));
+  }
+} else {
+  console.log('Missing size');
 }
