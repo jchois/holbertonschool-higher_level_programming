@@ -7,12 +7,13 @@ class Rectangle {
       this.height = h;
     }
   }
-}
 
-print () {
-  for (let i = 0; i < this.heigh; i++) {
-    console.log("X".repeat(this.width));
+  print () {
+    for (let i = 0; i < this.heigh; i++) {
+      console.log("X".repeat(this.width));
+    }
   }
 }
+
 
 module.exports = Rectangle;
