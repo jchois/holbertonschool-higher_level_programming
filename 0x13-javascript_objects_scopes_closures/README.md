@@ -1,4 +1,4 @@
-# 0x16. 0x13. Javascript - Objects, Scopes and Closures
+# 0x13. Javascript - Objects, Scopes and Closures
 
 ### Resources 🔧
 
